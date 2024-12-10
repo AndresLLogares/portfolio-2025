@@ -1,111 +1,49 @@
-import { useEffect, useMemo, useState } from 'react';
-import Particles, { initParticlesEngine } from '@tsparticles/react';
-import {
-  type Container,
-  type ISourceOptions,
-  MoveDirection,
-  OutMode,
-} from '@tsparticles/engine';
-import { loadSlim } from '@tsparticles/slim';
-import { Colors } from '../../lib/enums/colors';
+import MonsterIcon2 from '../icons/monsterIcon2';
+import MonsterIcon3 from '../icons/monsterIcon3';
+import MonsterIcon4 from '../icons/monsterIcon4';
+import MonsterIcon5 from '../icons/monsterIcon5';
+import { Snowflake } from './style';
 const ParticlesComponent = () => {
-  const [init, setInit] = useState(false);
-
-  useEffect(() => {
-    initParticlesEngine(async (engine) => {
-      await loadSlim(engine);
-    }).then(() => {
-      setInit(true);
-    });
-  }, []);
-
-  const particlesLoaded = async (container?: Container): Promise<void> => {
-    console.log(container);
-  };
-
-  const options: ISourceOptions = useMemo(
-    () => ({
-      background: {
-        color: {
-          value: 'transparent',
-        },
-      },
-      fpsLimit: 120,
-      interactivity: {
-        events: {
-          onClick: {
-            enable: true,
-            mode: 'push',
-          },
-          onHover: {
-            enable: true,
-            mode: 'repulse',
-          },
-        },
-        modes: {
-          push: {
-            quantity: 4,
-          },
-          repulse: {
-            distance: 200,
-            duration: 0.4,
-          },
-        },
-      },
-      particles: {
-        color: {
-          value: `${Colors.darkslategray}`,
-        },
-        links: {
-          color: `${Colors.darkslategray}`,
-          distance: 150,
-          enable: true,
-          opacity: 0.5,
-          width: 1,
-        },
-        move: {
-          direction: MoveDirection.none,
-          enable: true,
-          outModes: {
-            default: OutMode.out,
-          },
-          random: false,
-          speed: 2,
-          straight: false,
-        },
-        number: {
-          density: {
-            enable: true,
-          },
-          value: 80,
-        },
-        opacity: {
-          value: 0.5,
-        },
-        shape: {
-          type: ['star'], // Agregamos el tipo 'image'
-       
-        },
-        size: {
-          value: { min: 1, max: 5 },
-        },
-      },
-      detectRetina: true,
-    }),
-    [],
+  return (
+    <>
+      <Snowflake>
+        <MonsterIcon2 />
+      </Snowflake>
+      <Snowflake>
+        <MonsterIcon3 />
+      </Snowflake>
+      <Snowflake>
+        <MonsterIcon4 />
+      </Snowflake>
+      <Snowflake>
+        <MonsterIcon5 />
+      </Snowflake>
+      <Snowflake>
+        <MonsterIcon2 />
+      </Snowflake>
+      <Snowflake>
+        <MonsterIcon3 />
+      </Snowflake>
+      <Snowflake>
+        <MonsterIcon4 />
+      </Snowflake>
+      <Snowflake>
+        <MonsterIcon5 />
+      </Snowflake>
+      <Snowflake>
+        <MonsterIcon2 />
+      </Snowflake>
+      <Snowflake>
+        <MonsterIcon3 />
+      </Snowflake>
+      <Snowflake>
+        <MonsterIcon4 />
+      </Snowflake>
+      <Snowflake>
+        <MonsterIcon5 />
+      </Snowflake>
+    </>
   );
-
-  if (init) {
-    return (
-      <Particles
-        id="tsparticles"
-        particlesLoaded={particlesLoaded}
-        options={options}
-      />
-    );
-  }
-
-  return <></>;
 };
 
 export default ParticlesComponent;

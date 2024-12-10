@@ -28,9 +28,6 @@ export const Nav = styled.nav`
   width: 85%;
   z-index: 12;
   ${BoxAnimation};
-  @media (max-width: 1024px) {
-    animation: none;
-  }
 `;
 
 export const NavMenu = styled.div`
