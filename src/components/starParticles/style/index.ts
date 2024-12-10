@@ -22,18 +22,18 @@ const snowflakesShake = keyframes`
   }
 `;
 
-// Styled components
 export const Snowflake = styled.div`
-  color: ${Colors.chocolate};
-  font-size: 24px;
-  font-family: Arial, sans-serif;
-  text-shadow: 0 0 1px ${Colors.chocolate};
-  position: fixed;
-  top: -10%;
-  z-index: 1;
-  user-select: none;
-  cursor: default;
   animation: ${snowflakesFall} 10s linear infinite, ${snowflakesShake} 3s ease-in-out infinite;
+  color: ${Colors.chocolate};
+  cursor: default;
+  font-family: Arial, sans-serif;
+  font-size: 24px;
+  opacity: 0.5;
+  position: fixed;
+  text-shadow: 0 0 1px ${Colors.chocolate};
+  top: -10%;
+  user-select: none;
+  z-index: 1;
   &:nth-of-type(1) {
     left: 10%;
     animation-delay: 1s, 1s;
