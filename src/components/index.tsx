@@ -1,0 +1,14 @@
+export { default as ParallaxComponent } from './parallax';
+export { default as Navbar } from './navbar';
+export { default as Layout } from './layout';
+export { default as Boop } from './buttonNav';
+export { default as NavIcon } from './icons/navIcons';
+export { default as Cursor } from './cursor';
+export { default as Introduction } from './introduction';
+export { default as Journey } from './journey';
+export { default as ContactMe } from './contactMe';
+export { default as Monster1 } from './svgs/Monster_2';
+export { default as Monster2 } from './svgs/Monster_1';
+export { default as Monster3 } from './svgs/Monster_3';
+export { default as Monster4 } from './svgs/Monster_4';
+export { default as ProfessionalEthos} from './profesionalEthos';
