@@ -3,7 +3,6 @@ import { useWindowScroll } from '@uidotdev/usehooks';
 
 const MainContainer = () => {
   const [{ y }] = useWindowScroll();
-  console.log('y', y);
   return (
     <Layout>
       <Cursor />
